@@ -27,7 +27,7 @@ public class Welcome4 extends Fragment {
         binding = FragmentWelcome4Binding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        welcome_text = (TextView) root.findViewById(R.id.greeting);
+        welcome_text = (TextView) root.findViewById(R.id.niceToMeetYou);
 
         return root;
     }
@@ -40,13 +40,6 @@ public class Welcome4 extends Fragment {
         String user_name = settings.getString("user_name", "");
 
         welcome_text.setText("It great to meet you " + user_name + "!");
-
-        view.findViewById(R.id.enterBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getActivity().finish();
-            }
-        });
     }
 
     @Override

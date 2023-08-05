@@ -8,7 +8,7 @@
     tools:context=".ui.welcome.Welcome2">
 
     <TextView
-        android:id="@+id/welcomeTo"
+        android:id="@+id/niceToMeetYou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60sp"
@@ -36,27 +36,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeTo" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_margin="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/another_plant"
-        app:lottie_url="REPLACE_JSON_URL" />
+        app:layout_constraintTop_toBottomOf="@+id/niceToMeetYou" />
 
     <Button
         android:id="@+id/low"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/green2"
-        android:text="🙁"
+        android:text="😣"
         app:layout_constraintBottom_toTopOf="@+id/animationView"
         app:layout_constraintStart_toStartOf="@+id/animationView"
         app:layout_constraintTop_toBottomOf="@+id/howWouldYou" />
@@ -76,7 +63,7 @@
         android:id="@+id/med"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="🙁"
+        android:text="😐"
         android:backgroundTint="@color/green2"
         app:layout_constraintBottom_toTopOf="@+id/animationView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +74,7 @@
         android:id="@+id/med_high"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="🙁"
+        android:text="🙂"
         android:backgroundTint="@color/green2"
         app:layout_constraintBottom_toTopOf="@+id/animationView"
         app:layout_constraintEnd_toStartOf="@+id/high"
@@ -99,10 +86,23 @@
         android:id="@+id/high"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="🙁"
+        android:text="😀"
         android:backgroundTint="@color/green2"
         app:layout_constraintBottom_toTopOf="@+id/animationView"
         app:layout_constraintEnd_toEndOf="@+id/animationView"
         app:layout_constraintTop_toBottomOf="@+id/howWouldYou" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/another_tree"
+        app:lottie_url="REPLACE_JSON_URL" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
