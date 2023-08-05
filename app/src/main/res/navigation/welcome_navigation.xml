@@ -60,6 +60,16 @@
         android:name="lilja.kiiski.codingforchangeapp.ui.welcome.Welcome6"
         android:label="Welcome6"
         tools:layout="@layout/fragment_welcome6" >
+        <action
+            android:id="@+id/action_welcome_6_to_welcome_7"
+            app:destination="@id/welcome_7" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/welcome_7"
+        android:name="lilja.kiiski.codingforchangeapp.ui.welcome.Welcome7"
+        android:label="Welcome7"
+        tools:layout="@layout/fragment_welcome7" >
     </fragment>
 </navigation>
 

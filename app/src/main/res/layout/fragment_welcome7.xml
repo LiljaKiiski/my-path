@@ -50,7 +50,7 @@
         android:backgroundTint="@color/green2"
         android:fontFamily="casual"
         android:padding="20dp"
-        android:text="Continue"
+        android:text="Let's go!"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/animationView"
         app:layout_constraintEnd_toEndOf="parent"
