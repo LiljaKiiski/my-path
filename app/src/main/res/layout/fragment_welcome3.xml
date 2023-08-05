@@ -49,7 +49,7 @@
         android:backgroundTint="@color/green2"
         android:fontFamily="casual"
         android:padding="20dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="160dp"
         android:text="Enter"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/animationView"
@@ -60,13 +60,13 @@
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/another_plant"
+        app:lottie_rawRes="@raw/flower"
         app:lottie_url="REPLACE_JSON_URL" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

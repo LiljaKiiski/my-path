@@ -40,7 +40,16 @@
         android:name="lilja.kiiski.codingforchangeapp.ui.welcome.Welcome4"
         android:label="Welcome4"
         tools:layout="@layout/fragment_welcome4" >
+        <action
+            android:id="@+id/action_welcome_4_to_welcome_5"
+            app:destination="@id/welcome_5" />
+    </fragment>
 
+    <fragment
+        android:id="@+id/welcome_5"
+        android:name="lilja.kiiski.codingforchangeapp.ui.welcome.Welcome5"
+        android:label="Welcome5"
+        tools:layout="@layout/fragment_welcome5" >
     </fragment>
 </navigation>
 

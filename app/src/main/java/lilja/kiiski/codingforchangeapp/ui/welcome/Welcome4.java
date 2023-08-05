@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +41,71 @@ public class Welcome4 extends Fragment {
         String user_name = settings.getString("user_name", "");
 
         welcome_text.setText("It great to meet you " + user_name + "!");
+
+        view.findViewById(R.id.low).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("user_status", "low");
+                editor.apply();
+
+                NavHostFragment.findNavController(Welcome4.this)
+                        .navigate(R.id.action_welcome_4_to_welcome_5);
+            }
+        });
+
+        view.findViewById(R.id.med_low).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("user_status", "med_low");
+                editor.apply();
+
+                NavHostFragment.findNavController(Welcome4.this)
+                        .navigate(R.id.action_welcome_4_to_welcome_5);
+            }
+        });
+
+        view.findViewById(R.id.med).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("user_status", "med");
+                editor.apply();
+
+                NavHostFragment.findNavController(Welcome4.this)
+                        .navigate(R.id.action_welcome_4_to_welcome_5);
+            }
+        });
+
+        view.findViewById(R.id.med_high).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("user_status", "med_high");
+                editor.apply();
+
+                NavHostFragment.findNavController(Welcome4.this)
+                        .navigate(R.id.action_welcome_4_to_welcome_5);
+            }
+        });
+
+        view.findViewById(R.id.high).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("user_status", "high");
+                editor.apply();
+
+                NavHostFragment.findNavController(Welcome4.this)
+                        .navigate(R.id.action_welcome_4_to_welcome_5);
+            }
+        });
     }
 
     @Override

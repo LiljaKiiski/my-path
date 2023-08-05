@@ -1,8 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.welcome.Welcome5">
+    tools:context=".ui.welcome.Welcome3">
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/great"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:fontFamily="casual"
+        android:text="Last question..."
+        android:textAlignment="center"
+        android:textColor="@color/green3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/whatAreas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:layout_marginTop="20dp"
+        android:text="What areas of your life do you want to work on?"
+        android:textAlignment="center"
+        android:textColor="@color/green3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/great" />
+
+    <Button
+        android:id="@+id/enterBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:backgroundTint="@color/green2"
+        android:fontFamily="casual"
+        android:padding="20dp"
+        android:text="Enter"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/animationView"
+        app:layout_constraintEnd_toStartOf="@+id/animationView"
+        app:layout_constraintStart_toStartOf="@+id/other"
+        app:layout_constraintTop_toBottomOf="@+id/other"
+        app:tint="@color/white" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/another_plant"
+        app:lottie_url="REPLACE_JSON_URL" />
+
+    <CheckBox
+        android:id="@+id/workLifeBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Work-life balance"
+        android:buttonTint="@color/green3"
+        android:textColor="@color/green3"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whatAreas" />
+
+    <CheckBox
+        android:id="@+id/mindfulness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mindfulness"
+        android:buttonTint="@color/green3"
+        android:textColor="@color/green3"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workLifeBalance" />
+
+    <CheckBox
+        android:id="@+id/managingStress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Managing stress"
+        android:buttonTint="@color/green3"
+        android:textColor="@color/green3"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mindfulness" />
+
+    <CheckBox
+        android:id="@+id/productivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Productivity"
+        android:buttonTint="@color/green3"
+        android:textColor="@color/green3"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/managingStress" />
+
+    <CheckBox
+        android:id="@+id/other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:buttonTint="@color/green3"
+        android:textColor="@color/green3"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productivity" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
