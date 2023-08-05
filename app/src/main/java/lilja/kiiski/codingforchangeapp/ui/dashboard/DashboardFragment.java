@@ -16,9 +16,13 @@ import lilja.kiiski.codingforchangeapp.R;
 import lilja.kiiski.codingforchangeapp.databinding.FragmentDashboardBinding;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
@@ -28,17 +32,11 @@ public class DashboardFragment extends Fragment {
 
     private FragmentDashboardBinding binding;
 
-    // variable for our bar chart
-    BarChart barChart;
+    PieChart pieChart;
+    PieDataSet pieDataSet;
 
-    // variable for our bar data.
-    BarData barData;
-
-    // variable for our bar data set.
-    BarDataSet barDataSet;
-
-    // array list for storing entries.
-    ArrayList<BarEntry> barEntriesArrayList;
+    PieData pieData;
+    ArrayList<PieEntry> pieEntries;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -53,29 +51,28 @@ public class DashboardFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        barChart = view.findViewById(R.id.idBarChart);
-        getBarEntries();
-        barDataSet = new BarDataSet(barEntriesArrayList, "Your mood");
-        barData = new BarData(barDataSet);
-        barChart.setData(barData);
+        pieChart = view.findViewById(R.id.idBarChart);
+        getPieEntries();
+        pieDataSet = new PieDataSet(pieEntries, "Your mood");
+        pieData = new PieData(pieDataSet);
+        pieChart.setData(pieData);
 
-        barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
-        barDataSet.setValueTextColor(Color.BLACK);
+        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+        pieDataSet.setValueTextColor(Color.BLACK);
 
-        barDataSet.setValueTextSize(16f);
-        barChart.getDescription().setEnabled(false);
-
+        pieDataSet.setValueTextSize(16f);
+        pieChart.getDescription().setEnabled(false);
     }
 
-    private void getBarEntries() {
-        barEntriesArrayList = new ArrayList<>();
+    private void getPieEntries() {
+        pieEntries = new ArrayList<>();
 
         SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
         String user_name = settings.getString("user_name", "");
 
         for(int x = 1; x <= 7; x++){
             int num = settings.getInt(x + "", 0);
-            barEntriesArrayList.add(new BarEntry(x, num));
+            pieEntries.add(new PieEntry(num, "⛈️"));
         }
     }
 
