@@ -64,7 +64,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
                 SharedPreferences.Editor editor = settings.edit();
-                editor.putString(Calendar.DAY_OF_WEEK + "", "low");
+                editor.putInt(Calendar.DAY_OF_WEEK + "", 1);
                 editor.apply();
                 disappearAllButtons(view);
                 mood_text.setText("⛈️");
@@ -77,7 +77,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
                 SharedPreferences.Editor editor = settings.edit();
-                editor.putString(Calendar.DAY_OF_WEEK + "", "med_low");
+                editor.putInt(Calendar.DAY_OF_WEEK + "", 2);
                 editor.apply();
                 disappearAllButtons(view);
                 mood_text.setText("\uD83C\uDF27️");
@@ -90,7 +90,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
                 SharedPreferences.Editor editor = settings.edit();
-                editor.putString(Calendar.DAY_OF_WEEK + "", "med_low");
+                editor.putInt(Calendar.DAY_OF_WEEK + "", 3);
                 editor.apply();
                 disappearAllButtons(view);
                 mood_text.setText("☁️");
@@ -103,7 +103,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
                 SharedPreferences.Editor editor = settings.edit();
-                editor.putString(Calendar.DAY_OF_WEEK + "", "med_low");
+                editor.putInt(Calendar.DAY_OF_WEEK + "", 4);
                 editor.apply();
                 disappearAllButtons(view);
                 mood_text.setText("\uD83C\uDF24️");
@@ -116,7 +116,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
                 SharedPreferences.Editor editor = settings.edit();
-                editor.putString(Calendar.DAY_OF_WEEK + "", "med_low");
+                editor.putInt(Calendar.DAY_OF_WEEK + "", 5);
                 editor.apply();
                 disappearAllButtons(view);
                 mood_text.setText("☀️️");

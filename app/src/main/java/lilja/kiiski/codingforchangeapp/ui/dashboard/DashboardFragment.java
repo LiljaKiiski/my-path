@@ -1,5 +1,6 @@
 package lilja.kiiski.codingforchangeapp.ui.dashboard;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class DashboardFragment extends Fragment {
 
@@ -36,7 +38,7 @@ public class DashboardFragment extends Fragment {
     BarDataSet barDataSet;
 
     // array list for storing entries.
-    ArrayList barEntriesArrayList;
+    ArrayList<BarEntry> barEntriesArrayList;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class DashboardFragment extends Fragment {
 
         barChart = view.findViewById(R.id.idBarChart);
         getBarEntries();
-        barDataSet = new BarDataSet(barEntriesArrayList, "Geeks for Geeks");
+        barDataSet = new BarDataSet(barEntriesArrayList, "Your mood");
         barData = new BarData(barDataSet);
         barChart.setData(barData);
 
@@ -66,17 +68,15 @@ public class DashboardFragment extends Fragment {
     }
 
     private void getBarEntries() {
-        // creating a new array list
         barEntriesArrayList = new ArrayList<>();
 
-        // adding new entry to our array list with bar
-        // entry and passing x and y axis value to it.
-        barEntriesArrayList.add(new BarEntry(1f, 4));
-        barEntriesArrayList.add(new BarEntry(2f, 6));
-        barEntriesArrayList.add(new BarEntry(3f, 8));
-        barEntriesArrayList.add(new BarEntry(4f, 2));
-        barEntriesArrayList.add(new BarEntry(5f, 4));
-        barEntriesArrayList.add(new BarEntry(6f, 1));
+        SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
+        String user_name = settings.getString("user_name", "");
+
+        for(int x = 1; x <= 7; x++){
+            int num = settings.getInt(x + "", 0);
+            barEntriesArrayList.add(new BarEntry(x, num));
+        }
     }
 
     @Override
