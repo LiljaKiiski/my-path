@@ -30,7 +30,7 @@ public class Welcome3 extends Fragment {
         View root = binding.getRoot();
 
         welcome_text = (TextView) root.findViewById(R.id.greeting);
-        name_area_text = root.findViewById(R.id.nameTextArea);
+        name_area_text = root.findViewById(R.id.pathTextArea);
 
         return root;
     }
