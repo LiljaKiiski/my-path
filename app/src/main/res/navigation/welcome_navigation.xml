@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome_navigation"
+    app:startDestination="@id/welcome_1">
+
+    <fragment
+        android:id="@+id/welcome_1"
+        android:name="lilja.kiiski.codingforchangeapp.ui.welcome.Welcome1"
+        android:label="Welcome1"
+        tools:layout="@layout/fragment_welcome1" >
+        <action
+            android:id="@+id/action_welcome_1_to_welcome_2"
+            app:destination="@id/welcome_2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/welcome_2"
+        android:name="lilja.kiiski.codingforchangeapp.ui.welcome.Welcome2"
+        android:label="Welcome2"
+        tools:layout="@layout/fragment_welcome2" >
+        <action
+            android:id="@+id/action_welcome_2_to_welcome_3"
+            app:destination="@id/welcome_3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/welcome_3"
+        android:name="lilja.kiiski.codingforchangeapp.ui.welcome.Welcome3"
+        android:label="Welcome3"
+        tools:layout="@layout/fragment_welcome3" />
+</navigation>
+
