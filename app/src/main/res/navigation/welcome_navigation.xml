@@ -29,6 +29,18 @@
         android:id="@+id/welcome_3"
         android:name="lilja.kiiski.codingforchangeapp.ui.welcome.Welcome3"
         android:label="Welcome3"
-        tools:layout="@layout/fragment_welcome3" />
+        tools:layout="@layout/fragment_welcome3" >
+        <action
+            android:id="@+id/action_welcome_3_to_welcome_4"
+            app:destination="@id/welcome_4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/welcome_4"
+        android:name="lilja.kiiski.codingforchangeapp.ui.welcome.Welcome4"
+        android:label="Welcome4"
+        tools:layout="@layout/fragment_welcome4" >
+
+    </fragment>
 </navigation>
 

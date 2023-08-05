@@ -2,17 +2,17 @@
     <!-- Base application theme. -->
     <style name="Theme.Codingforchangeapp" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/blue_dark</item>
-        <item name="colorPrimaryVariant">@color/blue_med</item>
+        <item name="colorPrimary">@color/green3</item>
+        <item name="colorPrimaryVariant">@color/green2</item>
         <item name="colorOnPrimary">@color/white</item>
 
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/blue_med</item>
-        <item name="colorSecondaryVariant">@color/blue_light</item>
+        <item name="colorSecondary">@color/green2</item>
+        <item name="colorSecondaryVariant">@color/green1</item>
         <item name="colorOnSecondary">@color/white</item>
 
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">?attr/colorSecondaryVariant</item>
 
         <!-- Customize your theme here. -->
         <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>

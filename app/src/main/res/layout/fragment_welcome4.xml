@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/howWouldYou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -48,7 +48,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/plant"
+        app:lottie_rawRes="@raw/another_plant"
         app:lottie_url="REPLACE_JSON_URL" />
+
+    <Button
+        android:id="@+id/low"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/green2"
+        android:text="🙁"
+        app:layout_constraintBottom_toTopOf="@+id/animationView"
+        app:layout_constraintStart_toStartOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/howWouldYou" />
+
+    <Button
+        android:id="@+id/med_low"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/green2"
+        android:text="🙁"
+        app:layout_constraintBottom_toTopOf="@+id/animationView"
+        app:layout_constraintEnd_toStartOf="@+id/med"
+        app:layout_constraintStart_toEndOf="@+id/low"
+        app:layout_constraintTop_toBottomOf="@+id/howWouldYou" />
+
+    <Button
+        android:id="@+id/med"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="🙁"
+        android:backgroundTint="@color/green2"
+        app:layout_constraintBottom_toTopOf="@+id/animationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/howWouldYou" />
+
+    <Button
+        android:id="@+id/med_high"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="🙁"
+        android:backgroundTint="@color/green2"
+        app:layout_constraintBottom_toTopOf="@+id/animationView"
+        app:layout_constraintEnd_toStartOf="@+id/high"
+        app:layout_constraintStart_toEndOf="@+id/med"
+        app:layout_constraintTop_toBottomOf="@+id/howWouldYou"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <Button
+        android:id="@+id/high"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="🙁"
+        android:backgroundTint="@color/green2"
+        app:layout_constraintBottom_toTopOf="@+id/animationView"
+        app:layout_constraintEnd_toEndOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/howWouldYou" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
