@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
 import lilja.kiiski.codingforchangeapp.DeepBreathActivity;
+import lilja.kiiski.codingforchangeapp.DiscoverActivity;
 import lilja.kiiski.codingforchangeapp.MainActivity;
 import lilja.kiiski.codingforchangeapp.R;
 import lilja.kiiski.codingforchangeapp.WelcomeActivity;
@@ -55,8 +56,7 @@ public class HomeFragment extends Fragment {
         view.findViewById(R.id.discoverBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(HomeFragment.this)
-                        .navigate(R.id.action_navigation_home_to_discover);
+                startActivity(new Intent(getActivity(), DiscoverActivity.class));
             }
         });
     }
