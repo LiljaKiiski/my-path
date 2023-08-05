@@ -6,185 +6,164 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <ScrollView
+    <TextView
+        android:id="@+id/welcome"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="77dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="🙋 Welcome, Name"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/back_green"
+        android:textColor="@color/green3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/todaysmood"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/back_orange"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="☁️ Today's mood"
+        android:textColor="@color/orange_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <Button
+        android:id="@+id/low"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/blue_btn"
+        android:text="⛈️"
+        app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
+        app:layout_constraintStart_toStartOf="@+id/todaysmood" />
 
-            <TextView
-                android:id="@+id/welcome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:padding="25dp"
-                android:text="🙋 Welcome, Name"
-                android:background="@drawable/rounded_corner"
-                android:backgroundTint="@color/back_green"
-                android:textColor="@color/green3"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:layout_margin="20dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/med_low"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/blue_btn"
+        android:text="🌧️"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
+        app:layout_constraintEnd_toStartOf="@+id/med"
+        app:layout_constraintStart_toEndOf="@+id/low"/>
 
-            <TextView
-                android:id="@+id/todaysmood"
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:layout_margin="20dp"
-                android:background="@drawable/rounded_corner"
-                android:backgroundTint="@color/back_orange"
-                android:fontFamily="casual"
-                android:padding="25dp"
-                android:text="☁️ Today's mood"
-                android:textColor="@color/orange_light"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/welcome" />
+    <Button
+        android:id="@+id/med"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/blue_btn"
+        android:text="☁️"
+        app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
+        app:layout_constraintEnd_toEndOf="@+id/todaysmood"
+        app:layout_constraintStart_toStartOf="@+id/todaysmood" />
 
-            <Button
-                android:id="@+id/low"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/blue_btn"
-                android:text="⛈️"
-                app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
-                app:layout_constraintStart_toStartOf="@+id/todaysmood" />
+    <Button
+        android:id="@+id/med_high"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/blue_btn"
+        android:text="🌤️"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
+        app:layout_constraintEnd_toStartOf="@+id/high"
+        app:layout_constraintStart_toEndOf="@+id/med"/>
 
-            <Button
-                android:id="@+id/med_low"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:backgroundTint="@color/blue_btn"
-                android:text="🌧️"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
-                app:layout_constraintEnd_toStartOf="@+id/med"
-                app:layout_constraintStart_toEndOf="@+id/low"/>
+    <Button
+        android:id="@+id/high"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/blue_btn"
+        android:text="☀️"
+        app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
+        app:layout_constraintEnd_toEndOf="@+id/todaysmood" />
 
-            <Button
-                android:id="@+id/med"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/blue_btn"
-                android:text="☁️"
-                app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
-                app:layout_constraintEnd_toEndOf="@+id/todaysmood"
-                app:layout_constraintStart_toStartOf="@+id/todaysmood" />
+    <TextView
+        android:id="@+id/deep_breathing"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:backgroundTint="@color/back_blue"
+        android:text="😌 Deep breathing"
+        android:textColor="@color/blue_med"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todaysmood" />
 
-            <Button
-                android:id="@+id/med_high"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:backgroundTint="@color/blue_btn"
-                android:text="🌤️"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
-                app:layout_constraintEnd_toStartOf="@+id/high"
-                app:layout_constraintStart_toEndOf="@+id/med"/>
+    <Button
+        android:id="@+id/startBreathBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/blue_btn2"
+        android:text="Start"
+        app:layout_constraintBottom_toBottomOf="@+id/deep_breathing"
+        app:layout_constraintStart_toStartOf="@+id/deep_breathing" />
 
-            <Button
-                android:id="@+id/high"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginRight="20dp"
-                android:backgroundTint="@color/blue_btn"
-                android:text="☀️"
-                app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
-                app:layout_constraintEnd_toEndOf="@+id/todaysmood" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/back_yellow"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="🔍 Discover"
+        android:textColor="@color/yellow_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/deep_breathing">
 
-            <TextView
-                android:id="@+id/deep_breathing"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="20dp"
-                android:background="@drawable/rounded_corner"
-                android:fontFamily="casual"
-                android:padding="25dp"
-                android:backgroundTint="@color/back_blue"
-                android:text="😌 Deep breathing"
-                android:textColor="@color/blue_med"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/todaysmood" />
+    </TextView>
 
-            <Button
-                android:id="@+id/startBreathBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:backgroundTint="@color/blue_btn2"
-                android:text="Start"
-                app:layout_constraintBottom_toBottomOf="@+id/deep_breathing"
-                app:layout_constraintStart_toStartOf="@+id/deep_breathing" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/back_yellow"
+        android:fontFamily="casual"
+        android:padding="20dp"
+        android:text="Discover new stress-relieving techniques, meditation guides, and more!"
+        android:textColor="@color/yellow_light"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/discoverBtn"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5" />
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:layout_margin="20dp"
-                android:background="@drawable/rounded_corner"
-                android:backgroundTint="@color/back_yellow"
-                android:fontFamily="casual"
-                android:padding="25dp"
-                android:text="🔍 Discover"
-                android:textColor="@color/yellow_light"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/deep_breathing">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="@color/back_yellow"
-            android:fontFamily="casual"
-            android:padding="20dp"
-            android:text="Discover new stress-relieving techniques, meditation guides, and more!"
-            android:textColor="@color/yellow_light"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/discoverBtn"
-            app:layout_constraintEnd_toEndOf="@+id/textView5"
-            app:layout_constraintStart_toStartOf="@+id/textView5" />
-
-        <Button
-            android:id="@+id/discoverBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:backgroundTint="@color/orange_btn"
-            android:text="Discover"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView5" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/discoverBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/orange_btn"
+        android:text="Discover"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

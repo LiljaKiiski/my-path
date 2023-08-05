@@ -19,6 +19,7 @@ import lilja.kiiski.codingforchangeapp.R;
 import lilja.kiiski.codingforchangeapp.WelcomeActivity;
 import lilja.kiiski.codingforchangeapp.databinding.FragmentHomeBinding;
 import lilja.kiiski.codingforchangeapp.ui.welcome.Welcome2;
+import lilja.kiiski.codingforchangeapp.ui.welcome.Welcome4;
 
 public class HomeFragment extends Fragment {
 
@@ -48,6 +49,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), DeepBreathActivity.class));
+            }
+        });
+
+        view.findViewById(R.id.discoverBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(HomeFragment.this)
+                        .navigate(R.id.action_navigation_home_to_discover);
             }
         });
     }

@@ -10,6 +10,9 @@
         android:name="lilja.kiiski.codingforchangeapp.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_discover"
+            app:destination="@id/discover" />
     </fragment>
 
     <fragment
@@ -17,5 +20,11 @@
         android:name="lilja.kiiski.codingforchangeapp.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/discover"
+        android:name="lilja.kiiski.codingforchangeapp.ui.home.DiscoverFragment"
+        android:label="Discover"
+        tools:layout="@layout/fragment_discover" />
 
 </navigation>
