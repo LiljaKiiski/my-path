@@ -7,13 +7,16 @@
     <color name="blue_med">#2483c5</color>
 
     <color name="orange_light">#FF9800</color>
+    <color name="yellow_light">#FFC107</color>
 
     <color name="blue_btn">#F7FDFF</color>
+    <color name="blue_btn2">#03A9F4</color>
     <color name="orange_btn">#FFB23E</color>
 
     <color name="back_blue">#E9F6FF</color>
-    <color name="back_green">#F7FFF5</color>
+    <color name="back_green">#D4FFC9</color>
     <color name="back_orange">#FFF3EA</color>
+    <color name="back_yellow">#FFFACE</color>
 
     <color name="green_hint">#E5FFC7</color>
     <color name="green1">#D6FFA6</color>
