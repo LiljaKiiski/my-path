@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences settings = getApplicationContext().getSharedPreferences("user_details", 0);
 
-        if (settings.getString("user_name", "") == ""){
+        //if (settings.getString("user_name", "") == ""){
             startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
-        }
+        //}
     }
 }

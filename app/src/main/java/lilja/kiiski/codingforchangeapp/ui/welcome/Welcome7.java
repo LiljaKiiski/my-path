@@ -41,12 +41,14 @@ public class Welcome7 extends Fragment {
         view.findViewById(R.id.continueBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
-                SharedPreferences.Editor editor = settings.edit();
-                editor.putString("user_path", path_area_text.getText().toString());
-                editor.apply();
+                if (path_area_text.getText().toString().length() > 0) {
+                    SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString("user_path", path_area_text.getText().toString());
+                    editor.apply();
 
-                getActivity().finish();
+                    getActivity().finish();
+                }
             }
         });
     }

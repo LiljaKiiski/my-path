@@ -31,13 +31,25 @@
         android:backgroundTint="@color/back_orange"
         android:fontFamily="casual"
         android:padding="25dp"
-        android:text="☁️ Today's mood"
+        android:text="☁️ Today's mood is..."
         android:textColor="@color/orange_light"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <TextView
+        android:id="@+id/the_mood"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:text="☁️"
+        android:textSize="80dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/todaysmood"
+        app:layout_constraintEnd_toEndOf="@+id/todaysmood"
+        app:layout_constraintStart_toStartOf="@+id/todaysmood" />
 
     <Button
         android:id="@+id/low"
@@ -164,6 +176,5 @@
         android:text="Discover"
         app:layout_constraintBottom_toBottomOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="@+id/textView5" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

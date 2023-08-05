@@ -6,12 +6,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
+
+import java.util.Calendar;
 
 import lilja.kiiski.codingforchangeapp.DeepBreathActivity;
 import lilja.kiiski.codingforchangeapp.DiscoverActivity;
@@ -26,6 +29,9 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     private TextView welcome_text;
+    private TextView mood_text;
+
+    private Button b1, b2, b3, b4, b5;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -33,6 +39,13 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
         welcome_text = (TextView) root.findViewById(R.id.welcome);
+        mood_text = (TextView) root.findViewById(R.id.the_mood);
+
+        b1 = ((Button)root.findViewById(R.id.low));
+        b2 = ((Button)root.findViewById(R.id.med_low));
+        b3 = ((Button)root.findViewById(R.id.med));
+        b4 = ((Button)root.findViewById(R.id.med_high));
+        b5 = ((Button)root.findViewById(R.id.high));
 
         return root;
     }
@@ -45,6 +58,71 @@ public class HomeFragment extends Fragment {
         String user_name = settings.getString("user_name", "");
 
         welcome_text.setText("\uD83D\uDE4B Welcome, " + user_name + "!");
+
+        view.findViewById(R.id.low).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(Calendar.DAY_OF_WEEK + "", "low");
+                editor.apply();
+                disappearAllButtons(view);
+                mood_text.setText("⛈️");
+                mood_text.setVisibility(View.VISIBLE);
+            }
+        });
+
+        view.findViewById(R.id.med_low).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(Calendar.DAY_OF_WEEK + "", "med_low");
+                editor.apply();
+                disappearAllButtons(view);
+                mood_text.setText("\uD83C\uDF27️");
+                mood_text.setVisibility(View.VISIBLE);
+            }
+        });
+
+        view.findViewById(R.id.med).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(Calendar.DAY_OF_WEEK + "", "med_low");
+                editor.apply();
+                disappearAllButtons(view);
+                mood_text.setText("☁️");
+                mood_text.setVisibility(View.VISIBLE);
+            }
+        });
+
+        view.findViewById(R.id.med_high).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(Calendar.DAY_OF_WEEK + "", "med_low");
+                editor.apply();
+                disappearAllButtons(view);
+                mood_text.setText("\uD83C\uDF24️");
+                mood_text.setVisibility(View.VISIBLE);
+            }
+        });
+
+        view.findViewById(R.id.high).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(Calendar.DAY_OF_WEEK + "", "med_low");
+                editor.apply();
+                disappearAllButtons(view);
+                mood_text.setText("☀️️");
+                mood_text.setVisibility(View.VISIBLE);
+            }
+        });
 
         view.findViewById(R.id.startBreathBtn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +137,14 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getActivity(), DiscoverActivity.class));
             }
         });
+    }
+
+    public void disappearAllButtons(View view){
+        b1.setVisibility(View.GONE);
+        b2.setVisibility(View.GONE);
+        b3.setVisibility(View.GONE);
+        b4.setVisibility(View.GONE);
+        b5.setVisibility(View.GONE);
     }
 
     @Override
