@@ -8,7 +8,7 @@
     tools:context=".ui.welcome.Welcome1">
 
         <TextView
-            android:id="@+id/hiThere"
+            android:id="@+id/iCanSee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hi there,"
@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/niceToMeetYou"
+            android:id="@+id/iWonderWhere"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
@@ -35,10 +35,10 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hiThere" />
+            app:layout_constraintTop_toBottomOf="@+id/iCanSee" />
 
         <Button
-            android:id="@+id/helloBtn"
+            android:id="@+id/Continue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -51,7 +51,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/niceToMeetYou"
+            app:layout_constraintTop_toBottomOf="@+id/iWonderWhere"
             app:layout_constraintVertical_bias="0.38"
             app:tint="@color/white" />
 

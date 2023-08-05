@@ -28,7 +28,7 @@ public class Welcome4 extends Fragment {
         binding = FragmentWelcome4Binding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        welcome_text = (TextView) root.findViewById(R.id.niceToMeetYou);
+        welcome_text = (TextView) root.findViewById(R.id.iWonderWhere);
 
         return root;
     }

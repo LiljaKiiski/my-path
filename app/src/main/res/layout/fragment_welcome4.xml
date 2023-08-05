@@ -5,10 +5,10 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.welcome.Welcome2">
+    tools:context=".ui.welcome.Welcome4">
 
     <TextView
-        android:id="@+id/niceToMeetYou"
+        android:id="@+id/iWonderWhere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60sp"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/niceToMeetYou" />
+        app:layout_constraintTop_toBottomOf="@+id/iWonderWhere" />
 
     <Button
         android:id="@+id/low"
