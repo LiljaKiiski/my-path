@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        setSupportActionBar(new Toolbar(this));
+        //setSupportActionBar(new Toolbar(this));
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
@@ -35,17 +35,12 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_home, R.id.navigation_dashboard)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
 
         SharedPreferences settings = getApplicationContext().getSharedPreferences("user_details", 0);
 
-        //if (settings.getString("user_name", "") == ""){
+        if (settings.getString("user_name", "") == ""){
             startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
-        //}
+        }
     }
 }

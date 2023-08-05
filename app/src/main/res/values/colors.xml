@@ -5,7 +5,9 @@
 
     <color name="blue_dark">#0A5488</color>
     <color name="blue_med">#2483c5</color>
-    <color name="blue_light">#acd6f2</color>
+
+    <color name="back_blue">#C2DFF3</color>
+    <color name="back_green">#E7FFE2</color>
 
     <color name="green1">#D6FFA6</color>
     <color name="green2">#75D654</color>
@@ -13,6 +15,6 @@
     <color name="green4">#34730A</color>
     <color name="green5">#155708</color>
 
-    <color name="green_hint">#D8FFAA</color>
+    <color name="green_hint">#E5FFC7</color>
 
 </resources>
