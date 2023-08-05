@@ -122,18 +122,28 @@
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/back_blue"
+                android:layout_height="150dp"
+                android:background="@color/back_orange"
                 android:fontFamily="casual"
                 android:padding="25dp"
-                android:text="☁️ Deep breathing"
-                android:textColor="@color/blue_med"
+                android:text="😌 Deep breathing"
+                android:textColor="@color/orange_light"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
-            
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/orange_btn"
+                android:text="Start"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
