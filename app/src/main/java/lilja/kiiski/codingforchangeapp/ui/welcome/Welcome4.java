@@ -1,6 +1,8 @@
 package lilja.kiiski.codingforchangeapp.ui.welcome;
 
 import android.content.SharedPreferences;
+import android.icu.text.SimpleDateFormat;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import java.util.Date;
+import java.util.Locale;
 
 import lilja.kiiski.codingforchangeapp.R;
 import lilja.kiiski.codingforchangeapp.databinding.FragmentWelcome4Binding;
@@ -58,9 +63,17 @@ public class Welcome4 extends Fragment {
         view.findViewById(R.id.med_low).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Date c = Calendar.getInstance().getTime();
+                System.out.println("Current time => " + c);
+
+                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
+                String formattedDate = df.format(c);
+                System.out.println(formattedDate);
+
                 SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putString("user_status", "med_low");
+                //editor.putString("start_date", Calendar.date)
                 editor.apply();
 
                 NavHostFragment.findNavController(Welcome4.this)

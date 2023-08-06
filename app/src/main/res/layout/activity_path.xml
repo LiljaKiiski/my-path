@@ -4,6 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/back_blue"
     tools:context=".PathActivity">
+
+    <TextView
+        android:id="@+id/your_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/back_blue"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="🗺️ My Path"
+        android:textColor="@color/blue_med"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/leave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/blue_btn2"
+        android:fontFamily="casual"
+        android:padding="20dp"
+        android:text="Leave"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_path"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/growth_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/back_blue"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="Currently you are on your path to []"
+        android:textAlignment="center"
+        android:textColor="@color/blue_med"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leave" />
+
+    <TextView
+        android:id="@+id/your_path3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/back_blue"
+        android:fontFamily="casual"
+        android:layout_marginHorizontal="40dp"
+        android:padding="25dp"
+        android:text="'Mental health... is not a destination, but a process. It's about how you drive, not where you're going'\n\n- Noah Shpancer, Phd"
+        android:textAlignment="center"
+        android:textColor="@color/blue_dark"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/growth_path" />
+
+    <TextView
+        android:id="@+id/start_journey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/back_blue"
+        android:fontFamily="casual"
+        android:text="You started your journey on XX/XXX/XX"
+        android:textAlignment="center"
+        android:textColor="@color/blue_med"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_path3" />
+
+    <TextView
+        android:id="@+id/num_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/back_blue"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="You are currently on day X of your journey"
+        android:textAlignment="center"
+        android:textColor="@color/blue_med"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_journey" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/your_path"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/boat"
+        app:lottie_url="REPLACE_JSON_URL" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

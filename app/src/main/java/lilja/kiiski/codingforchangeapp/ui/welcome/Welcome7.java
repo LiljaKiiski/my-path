@@ -1,6 +1,8 @@
 package lilja.kiiski.codingforchangeapp.ui.welcome;
 
 import android.content.SharedPreferences;
+import android.icu.text.SimpleDateFormat;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
+import java.util.Date;
+import java.util.Locale;
 
 import lilja.kiiski.codingforchangeapp.R;
 import lilja.kiiski.codingforchangeapp.databinding.FragmentWelcome1Binding;
@@ -42,9 +47,16 @@ public class Welcome7 extends Fragment {
             @Override
             public void onClick(View view) {
                 if (path_area_text.getText().toString().length() > 0) {
+                    Date c = Calendar.getInstance().getTime();
+                    System.out.println("Current time => " + c);
+
+                    SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+                    String formattedDate = df.format(c);
+
                     SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
                     SharedPreferences.Editor editor = settings.edit();
                     editor.putString("user_path", path_area_text.getText().toString());
+                    editor.putString("start_date", formattedDate);
                     editor.apply();
 
                     getActivity().finish();

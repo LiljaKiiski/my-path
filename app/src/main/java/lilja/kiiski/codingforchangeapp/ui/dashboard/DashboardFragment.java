@@ -1,5 +1,6 @@
 package lilja.kiiski.codingforchangeapp.ui.dashboard;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,9 +12,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
+import lilja.kiiski.codingforchangeapp.MainActivity;
+import lilja.kiiski.codingforchangeapp.PathActivity;
 import lilja.kiiski.codingforchangeapp.R;
+import lilja.kiiski.codingforchangeapp.WelcomeActivity;
 import lilja.kiiski.codingforchangeapp.databinding.FragmentDashboardBinding;
+import lilja.kiiski.codingforchangeapp.ui.welcome.Welcome1;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
@@ -50,6 +56,13 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        view.findViewById(R.id.viewPathBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), PathActivity.class));
+            }
+        });
 
         pieChart = view.findViewById(R.id.idBarChart);
         getPieEntries();
