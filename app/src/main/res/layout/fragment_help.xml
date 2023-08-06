@@ -1,8 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/back_red"
     tools:context=".ui.help.HelpFragment">
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/help1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="172dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/red_med"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="🚨 Need help? 🚨"
+        android:textAlignment="center"
+        android:textColor="@color/red_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/help2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/red_med"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="You are NOT alone.\nPlease ask for help whenever you think you might need it."
+        android:textAlignment="center"
+        android:textColor="@color/red_light"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help1" />
+
+    <TextView
+        android:id="@+id/help3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/red_med"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="📞 National Suicide Preventation Hotline: 988\n📞 Emergency Telephone: 911\n📱 Crisis Text Line: Text HOME to 741741"
+        android:textAlignment="center"
+        android:textColor="@color/red_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help2" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help3"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/help"
+        app:lottie_url="REPLACE_JSON_URL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
