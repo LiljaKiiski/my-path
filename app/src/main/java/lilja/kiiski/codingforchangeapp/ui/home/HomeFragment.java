@@ -55,9 +55,14 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
-        String user_name = settings.getString("user_name", "Lilja");
+        String user_name = settings.getString("user_name", null);
 
-        welcome_text.setText("\uD83D\uDE4B Welcome, " + user_name + "!");
+        if (user_name == null) {
+            welcome_text.setText("\uD83D\uDE4B Welcome!");
+
+        } else {
+            welcome_text.setText("\uD83D\uDE4B Welcome, " + user_name + "!");
+        }
 
         view.findViewById(R.id.low).setOnClickListener(new View.OnClickListener() {
             @Override

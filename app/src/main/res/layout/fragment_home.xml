@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:padding="25dp"
-        android:text="🙋 Welcome, Lilja"
+        android:text="🙋 Welcome"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="@color/back_green"
         android:textColor="@color/green3"
