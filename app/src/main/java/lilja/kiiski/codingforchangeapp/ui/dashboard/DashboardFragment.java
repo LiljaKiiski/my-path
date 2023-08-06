@@ -57,7 +57,7 @@ public class DashboardFragment extends Fragment {
         pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
 
-        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+        pieDataSet.setColors(ColorTemplate.JOYFUL_COLORS);
         pieDataSet.setValueTextColor(Color.BLACK);
 
         pieDataSet.setValueTextSize(16f);
@@ -70,9 +70,10 @@ public class DashboardFragment extends Fragment {
         SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
         String user_name = settings.getString("user_name", "");
 
-        for(int x = 1; x <= 7; x++){
+        for(int x = 0; x <= settings.getInt("num_entries", 0); x++){
             int num = settings.getInt(x + "", 0);
-            pieEntries.add(new PieEntry(num, "⛈️"));
+            String[] arr = {"", "⛈️", "\uD83C\uDF27️", "☁️", "\uD83C\uDF24️", "☀️"};
+            pieEntries.add(new PieEntry(num, arr[num]));
         }
     }
 
