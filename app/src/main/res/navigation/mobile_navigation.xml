@@ -18,5 +18,11 @@
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
+    <fragment
+        android:id="@+id/navigation_help"
+        android:name="lilja.kiiski.codingforchangeapp.ui.help.HelpFragment"
+        android:label="@string/title_help"
+        tools:layout="@layout/fragment_help" />
+
 
 </navigation>
