@@ -9,8 +9,10 @@
     <color name="orange_light">#FF9800</color>
     <color name="yellow_light">#FFC107</color>
     <color name="purple_light">#9122FF</color>
-    <color name="back_red">#FFCDC9</color>
+    <color name="red_light">#F44336</color>
+    <color name="red_med">#FFB0AA</color>
 
+    <color name="back_red">#FFCDC9</color>
     <color name="back_purple">#EDE4FF</color>
 
     <color name="blue_btn">#F7FDFF</color>
