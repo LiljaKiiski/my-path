@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_details", 0);
-        String user_name = settings.getString("user_name", "");
+        String user_name = settings.getString("user_name", "Lilja");
 
         welcome_text.setText("\uD83D\uDE4B Welcome, " + user_name + "!");
 

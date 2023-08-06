@@ -83,10 +83,20 @@ public class DashboardFragment extends Fragment {
         SharedPreferences settings = getActivity().getApplicationContext().getSharedPreferences("user_mood", 0);
         String user_name = settings.getString("user_name", "");
 
+
+        String[] arr = {"", "⛈️", "\uD83C\uDF27️", "☁️", "\uD83C\uDF24️", "☀️"};
+        int[] arr2 = {0, 0, 0, 0, 0, 0};
+
+
         for(int x = 0; x <= settings.getInt("num_entries", 0); x++){
             int num = settings.getInt(x + "", 0);
-            String[] arr = {"", "⛈️", "\uD83C\uDF27️", "☁️", "\uD83C\uDF24️", "☀️"};
-            pieEntries.add(new PieEntry(num, arr[num]));
+            arr2[num]++;
+        }
+
+        for (int x = 0; x < arr.length; x++) {
+            if (arr2[x] > 0) {
+                pieEntries.add(new PieEntry(arr2[x], arr[x]));
+            }
         }
     }
 
